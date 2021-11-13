@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
+            android:name=".DataBindingActivity"
+            android:exported="false" />
+        <activity
             android:name=".bottomSheet.ItemActivity"
             android:exported="false" />
         <activity android:name=".RecyclerViewActivity" />

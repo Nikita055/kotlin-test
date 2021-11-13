@@ -13,6 +13,7 @@ class SecondActivity : AppCompatActivity() {
     private lateinit var button: Button
     private lateinit var nextbtn : Button
     private lateinit var bottomSheet : Button
+    private lateinit var dataBinding : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +39,11 @@ class SecondActivity : AppCompatActivity() {
             val intSelection :Int = radioGroup !!.checkedRadioButtonId
             radioButton = findViewById(intSelection)
             Toast.makeText(applicationContext,radioButton.text,Toast.LENGTH_SHORT).show()
+        })
+
+        dataBinding.setOnClickListener(View.OnClickListener {
+            intent = Intent(applicationContext,DataBindingActivity::class.java)
+            startActivity(intent)
         })
 
         val listBtn = findViewById<Button>(R.id.list_btn)as Button
